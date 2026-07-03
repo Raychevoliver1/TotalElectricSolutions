@@ -61,7 +61,7 @@ export default function Header() {
           </a>
           <Link
             href="/contact/"
-            className="inline-flex items-center rounded-md bg-amber-500 px-5 py-2.5 text-sm font-bold text-navy-950 shadow-sm transition-colors hover:bg-amber-400"
+            className="inline-flex items-center rounded-md bg-blue-500 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-blue-600"
           >
             Get a Quote
           </Link>
@@ -106,7 +106,7 @@ export default function Header() {
             <Link
               href="/contact/"
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center rounded-md bg-amber-500 px-5 py-3 text-sm font-bold text-navy-950"
+              className="mt-4 inline-flex items-center justify-center rounded-md bg-blue-500 px-5 py-3 text-sm font-bold text-white"
             >
               Get a Quote
             </Link>

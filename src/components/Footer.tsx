@@ -52,7 +52,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-2 text-sm text-navy-300">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="hover:text-amber-400 transition-colors">
+                <Link href={link.href} className="hover:text-lime-400 transition-colors">
                   {link.label}
                 </Link>
               </li>
@@ -66,12 +66,12 @@ export default function Footer() {
           </h3>
           <ul className="mt-4 space-y-3 text-sm text-navy-300">
             <li>
-              <a href={site.phoneHref} className="hover:text-amber-400 transition-colors">
+              <a href={site.phoneHref} className="hover:text-lime-400 transition-colors">
                 {site.phone}
               </a>
             </li>
             <li>
-              <a href={`mailto:${site.email}`} className="hover:text-amber-400 transition-colors break-all">
+              <a href={`mailto:${site.email}`} className="hover:text-lime-400 transition-colors break-all">
                 {site.email}
               </a>
             </li>

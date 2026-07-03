@@ -23,7 +23,7 @@ export default function Home() {
         </div>
 
         <div className="container-tes relative py-24 lg:py-32">
-          <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-amber-400">
+          <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-lime-400">
             {site.tagline}
           </p>
           <h1 className="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight max-w-3xl">
@@ -33,7 +33,7 @@ export default function Home() {
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact/"
-              className="inline-flex items-center justify-center rounded-md bg-amber-500 px-7 py-3.5 text-sm font-bold text-navy-950 hover:bg-amber-400 transition-colors"
+              className="inline-flex items-center justify-center rounded-md bg-blue-500 px-7 py-3.5 text-sm font-bold text-white hover:bg-blue-600 transition-colors"
             >
               Enquire About Our Services
             </Link>
@@ -74,7 +74,7 @@ export default function Home() {
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {site.whyChooseUs.map((item, i) => (
               <div key={item.title} className="rounded-xl border border-navy-100 p-7">
-                <span className="font-display text-4xl font-bold text-amber-500">
+                <span className="font-display text-4xl font-bold text-blue-500">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-4 font-display text-xl font-semibold text-navy-950">
@@ -100,7 +100,7 @@ export default function Home() {
             </div>
             <Link
               href="/services/"
-              className="font-semibold text-navy-600 hover:text-amber-600 transition-colors"
+              className="font-semibold text-navy-600 hover:text-blue-600 transition-colors"
             >
               View all services &rarr;
             </Link>
@@ -111,7 +111,7 @@ export default function Home() {
               <Link
                 key={service.slug}
                 href="/services/"
-                className="group rounded-xl bg-white border border-navy-100 p-7 hover:border-amber-400 hover:shadow-lg transition-all"
+                className="group rounded-xl bg-white border border-navy-100 p-7 hover:border-blue-400 hover:shadow-lg transition-all"
               >
                 <h3 className="font-display text-lg font-semibold text-navy-950 group-hover:text-navy-600">
                   {service.title}
@@ -138,7 +138,7 @@ export default function Home() {
             </div>
             <Link
               href="/projects/"
-              className="font-semibold text-navy-600 hover:text-amber-600 transition-colors"
+              className="font-semibold text-navy-600 hover:text-blue-600 transition-colors"
             >
               View all projects &rarr;
             </Link>
@@ -159,7 +159,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-amber-400">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-lime-400">
                     {project.category}
                   </p>
                   <p className="mt-1 font-display text-lg font-semibold text-white">

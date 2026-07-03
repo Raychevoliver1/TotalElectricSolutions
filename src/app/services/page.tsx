@@ -29,7 +29,7 @@ export default function ServicesPage() {
               id={service.slug}
               className="grid gap-6 rounded-xl border border-navy-100 p-8 lg:grid-cols-[auto_1fr] lg:items-start lg:gap-10"
             >
-              <span className="font-display text-5xl font-bold text-amber-500">
+              <span className="font-display text-5xl font-bold text-blue-500">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div>

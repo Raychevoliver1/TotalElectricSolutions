@@ -10,7 +10,7 @@ export default function PageHero({
   return (
     <section className="bg-navy-950 text-white">
       <div className="container-tes py-16 lg:py-20">
-        <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-amber-400">
+        <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-lime-400">
           {eyebrow}
         </p>
         <h1 className="mt-3 font-display text-4xl sm:text-5xl font-semibold tracking-tight max-w-3xl">

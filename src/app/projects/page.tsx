@@ -34,7 +34,7 @@ export default function ProjectsPage() {
                 />
               </div>
               <div className="p-6">
-                <p className="text-xs font-semibold uppercase tracking-widest text-amber-600">
+                <p className="text-xs font-semibold uppercase tracking-widest text-blue-600">
                   {project.category}
                 </p>
                 <h2 className="mt-1 font-display text-xl font-semibold text-navy-950">
