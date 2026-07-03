@@ -55,6 +55,7 @@ export default function ContactPage() {
                 className="block text-sm font-semibold text-navy-900/70 hover:text-blue-600"
               >
                 LinkedIn &rarr;
+                <span className="sr-only"> (opens in a new tab)</span>
               </a>
             </div>
 

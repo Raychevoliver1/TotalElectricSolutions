@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div>
+        <nav aria-label="Footer">
           <h3 className="font-display text-sm font-semibold uppercase tracking-widest text-white">
             Menu
           </h3>
@@ -58,7 +58,7 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
 
         <div>
           <h3 className="font-display text-sm font-semibold uppercase tracking-widest text-white">
@@ -86,7 +86,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-navy-800">
-        <div className="container-tes py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-navy-400">
+        <div className="container-tes py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-navy-200">
           <p>
             &copy; {year} {site.legalName}. All rights reserved.
           </p>

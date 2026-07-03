@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -17,6 +17,21 @@ const NAV_LINKS = [
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-navy-100">
@@ -32,7 +47,7 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav aria-label="Primary" className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((link) => {
             const isActive =
               link.href === "/" ? pathname === "/" : pathname?.startsWith(link.href);
@@ -40,6 +55,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
+                aria-current={isActive ? "page" : undefined}
                 className={`text-sm font-semibold tracking-wide transition-colors ${
                   isActive
                     ? "text-navy-600"
@@ -70,8 +86,9 @@ export default function Header() {
         <button
           type="button"
           className="lg:hidden inline-flex items-center justify-center rounded-md p-2 text-navy-900"
-          aria-label="Toggle menu"
+          aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
+          aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
         >
           <svg
@@ -80,6 +97,7 @@ export default function Header() {
             viewBox="0 0 24 24"
             strokeWidth={2}
             stroke="currentColor"
+            aria-hidden="true"
           >
             {open ? (
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -91,18 +109,23 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-navy-100 bg-white">
-          <nav className="container-tes flex flex-col py-4">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="py-3 text-base font-semibold text-navy-900 border-b border-navy-50 last:border-none"
-              >
-                {link.label}
-              </Link>
-            ))}
+        <div id="mobile-nav" className="lg:hidden border-t border-navy-100 bg-white">
+          <nav aria-label="Mobile" className="container-tes flex flex-col py-4">
+            {NAV_LINKS.map((link) => {
+              const isActive =
+                link.href === "/" ? pathname === "/" : pathname?.startsWith(link.href);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  aria-current={isActive ? "page" : undefined}
+                  onClick={() => setOpen(false)}
+                  className="py-3 text-base font-semibold text-navy-900 border-b border-navy-50 last:border-none"
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <Link
               href="/contact/"
               onClick={() => setOpen(false)}

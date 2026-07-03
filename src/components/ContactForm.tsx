@@ -40,7 +40,11 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-xl bg-navy-50 border border-navy-100 p-8 text-center">
+      <div
+        role="status"
+        aria-live="polite"
+        className="rounded-xl bg-navy-50 border border-navy-100 p-8 text-center"
+      >
         <h3 className="font-display text-xl font-semibold text-navy-950">
           Thanks — your message is on its way.
         </h3>
@@ -62,6 +66,7 @@ export default function ContactForm() {
             id="name"
             name="name"
             type="text"
+            autoComplete="name"
             required
             className="mt-1.5 w-full rounded-md border border-navy-200 px-4 py-2.5 text-navy-950 focus:border-navy-500 focus:outline-none focus:ring-1 focus:ring-navy-500"
           />
@@ -74,6 +79,7 @@ export default function ContactForm() {
             id="company"
             name="company"
             type="text"
+            autoComplete="organization"
             className="mt-1.5 w-full rounded-md border border-navy-200 px-4 py-2.5 text-navy-950 focus:border-navy-500 focus:outline-none focus:ring-1 focus:ring-navy-500"
           />
         </div>
@@ -85,6 +91,7 @@ export default function ContactForm() {
             id="email"
             name="email"
             type="email"
+            autoComplete="email"
             required
             className="mt-1.5 w-full rounded-md border border-navy-200 px-4 py-2.5 text-navy-950 focus:border-navy-500 focus:outline-none focus:ring-1 focus:ring-navy-500"
           />
@@ -97,6 +104,7 @@ export default function ContactForm() {
             id="tel"
             name="tel"
             type="tel"
+            autoComplete="tel"
             className="mt-1.5 w-full rounded-md border border-navy-200 px-4 py-2.5 text-navy-950 focus:border-navy-500 focus:outline-none focus:ring-1 focus:ring-navy-500"
           />
         </div>
@@ -114,15 +122,17 @@ export default function ContactForm() {
         />
       </div>
 
-      {status === "error" && (
-        <p className="text-sm font-medium text-red-600">
-          Sorry, the message couldn&apos;t be sent right now. Please email{" "}
-          <a href="mailto:info@totalelectricsolutions.co.uk" className="underline">
-            info@totalelectricsolutions.co.uk
-          </a>{" "}
-          directly instead.
-        </p>
-      )}
+      <div role="alert" aria-live="assertive">
+        {status === "error" && (
+          <p className="text-sm font-medium text-red-600">
+            Sorry, the message couldn&apos;t be sent right now. Please email{" "}
+            <a href="mailto:info@totalelectricsolutions.co.uk" className="underline">
+              info@totalelectricsolutions.co.uk
+            </a>{" "}
+            directly instead.
+          </p>
+        )}
+      </div>
 
       <button
         type="submit"

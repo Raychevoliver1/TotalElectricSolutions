@@ -71,8 +71,16 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col font-sans text-navy-950 bg-white">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-md focus:bg-blue-500 focus:px-4 focus:py-2.5 focus:text-sm focus:font-bold focus:text-white"
+        >
+          Skip to main content
+        </a>
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" tabIndex={-1} className="flex-1 focus:outline-none">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

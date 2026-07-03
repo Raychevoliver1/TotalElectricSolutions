@@ -6,6 +6,7 @@ backend:
 # site dashboard (Site configuration > Identity, and Identity > Services >
 # Git Gateway), then invite editors as Identity users. See HANDOFF.md.
 
+logo_url: /images/brand/logo.svg
 publish_mode: simple
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
@@ -13,62 +14,164 @@ public_folder: "/images/uploads"
 collections:
   - name: "site"
     label: "Site Settings"
+    description: "Company details, homepage headline, contact info and the stats/reasons shown on the homepage."
     files:
       - name: "site"
         label: "Company Info & Homepage"
         file: "content/site.json"
         fields:
-          - { label: "Company Name", name: "companyName", widget: "string" }
-          - { label: "Legal Name", name: "legalName", widget: "string" }
-          - { label: "Founded (Year)", name: "founded", widget: "number", value_type: "int" }
-          - { label: "Tagline", name: "tagline", widget: "string" }
-          - { label: "Hero Heading", name: "heroHeading", widget: "string" }
-          - { label: "Hero Subheading", name: "heroSubheading", widget: "text" }
-          - { label: "Phone (display)", name: "phone", widget: "string" }
-          - { label: "Phone (tel: link)", name: "phoneHref", widget: "string" }
+          - {
+              label: "Company Name",
+              name: "companyName",
+              widget: "string",
+              hint: "Shown in the header, footer and browser tab.",
+            }
+          - {
+              label: "Legal Name",
+              name: "legalName",
+              widget: "string",
+              hint: "Full registered company name, used in the copyright line.",
+            }
+          - {
+              label: "Founded (Year)",
+              name: "founded",
+              widget: "number",
+              value_type: "int",
+            }
+          - {
+              label: "Tagline",
+              name: "tagline",
+              widget: "string",
+              hint: "Small line above the big homepage headline, e.g. \"Specialising in...\".",
+            }
+          - {
+              label: "Hero Heading",
+              name: "heroHeading",
+              widget: "string",
+              hint: "The big headline on the homepage.",
+            }
+          - {
+              label: "Hero Subheading",
+              name: "heroSubheading",
+              widget: "text",
+              hint: "The paragraph under the big homepage headline. Also used as the page description for Google.",
+            }
+          - {
+              label: "Phone (display)",
+              name: "phone",
+              widget: "string",
+              hint: "How the phone number is shown to visitors, e.g. \"01689 810802\".",
+            }
+          - {
+              label: "Phone (click-to-call link)",
+              name: "phoneHref",
+              widget: "string",
+              hint: "Same number, no spaces, e.g. \"tel:01689810802\" — this is what makes the phone number clickable on mobiles.",
+            }
           - { label: "Email", name: "email", widget: "string" }
-          - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+          - {
+              label: "LinkedIn URL",
+              name: "linkedin",
+              widget: "string",
+              hint: "Full link starting with https://",
+            }
           - label: "Offices"
             name: "offices"
             widget: "list"
+            label_singular: "Office"
+            summary: "{{fields.name}}"
             fields:
-              - { label: "Office Name", name: "name", widget: "string" }
+              - {
+                  label: "Office Name",
+                  name: "name",
+                  widget: "string",
+                  hint: "e.g. \"Head Office\" or \"London Office\"",
+                }
               - { label: "Town", name: "town", widget: "string" }
               - label: "Address Lines"
                 name: "address"
                 widget: "list"
+                hint: "One line of the address per entry — building, street, town, postcode."
                 field: { label: "Line", name: "line", widget: "string" }
-          - label: "Stats (homepage numbers)"
+          - label: "Homepage Stats"
             name: "stats"
             widget: "list"
+            label_singular: "Stat"
+            summary: "{{fields.value}} — {{fields.label}}"
+            hint: "The row of 4 numbers near the top of the homepage (e.g. \"40+ years of experience\")."
             fields:
-              - { label: "Value", name: "value", widget: "string" }
-              - { label: "Label", name: "label", widget: "string" }
+              - {
+                  label: "Value",
+                  name: "value",
+                  widget: "string",
+                  hint: "The big number, e.g. \"40+\" or \"2006\"",
+                }
+              - {
+                  label: "Label",
+                  name: "label",
+                  widget: "string",
+                  hint: "The small text underneath the number.",
+                }
           - label: "Why Choose Us"
             name: "whyChooseUs"
             widget: "list"
+            label_singular: "Reason"
+            summary: "{{fields.title}}"
+            hint: "The 3 numbered reason cards on the homepage."
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Body", name: "body", widget: "text" }
-          - { label: "Recognition line", name: "recognition", widget: "string" }
-          - { label: "Footer Note", name: "footerNote", widget: "string" }
+          - {
+              label: "Recognition line",
+              name: "recognition",
+              widget: "string",
+              hint: "Not currently shown on a page, kept for future use.",
+            }
+          - {
+              label: "Footer Note",
+              name: "footerNote",
+              widget: "string",
+              hint: "Small line in the very bottom bar of the site, next to the copyright.",
+            }
 
   - name: "about"
     label: "About Page"
+    description: "Content for the /about page — company history, values and the award mention."
     files:
       - name: "about"
         label: "About Page Content"
         file: "content/about.json"
         fields:
-          - { label: "Heading", name: "heading", widget: "string" }
+          - {
+              label: "Heading",
+              name: "heading",
+              widget: "string",
+              hint: "The big title at the top of the About page.",
+            }
           - { label: "Intro", name: "intro", widget: "text" }
-          - { label: "Approach", name: "approach", widget: "text" }
-          - { label: "Values", name: "values", widget: "text" }
+          - {
+              label: "Approach",
+              name: "approach",
+              widget: "text",
+              hint: "\"Our approach\" paragraph.",
+            }
+          - {
+              label: "Values",
+              name: "values",
+              widget: "text",
+              hint: "\"What we value\" paragraph.",
+            }
           - { label: "Recognition Heading", name: "recognitionHeading", widget: "string" }
-          - { label: "Recognition Body", name: "recognitionBody", widget: "text" }
+          - {
+              label: "Recognition Body",
+              name: "recognitionBody",
+              widget: "text",
+              hint: "The Small Awards recognition callout box.",
+            }
 
   - name: "training"
     label: "Training & Apprenticeships Page"
+    description: "Content for the /training-apprenticeships page."
     files:
       - name: "training"
         label: "Training Page Content"
@@ -77,10 +180,16 @@ collections:
           - { label: "Heading", name: "heading", widget: "string" }
           - { label: "Intro", name: "intro", widget: "text" }
           - { label: "Body", name: "body", widget: "text" }
-          - { label: "Call To Action", name: "cta", widget: "text" }
+          - {
+              label: "Call To Action",
+              name: "cta",
+              widget: "text",
+              hint: "Text inside the shaded box that invites people to apply.",
+            }
 
   - name: "team"
     label: "Team"
+    description: "People shown on the About page. Everyone gets a coloured initials badge instead of a photo, so you only need a name and role — no image to upload or resize."
     files:
       - name: "team"
         label: "Leadership & Site Team"
@@ -89,19 +198,29 @@ collections:
           - label: "Leadership"
             name: "leadership"
             widget: "list"
+            label_singular: "Person"
+            summary: "{{fields.name}} — {{fields.role}}"
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Role", name: "role", widget: "string" }
           - label: "Site Managers"
             name: "siteManagers"
             widget: "list"
+            label_singular: "Person"
+            summary: "{{fields.name}} — {{fields.role}}"
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Role", name: "role", widget: "string" }
-          - { label: "Office Team Note", name: "officeTeamNote", widget: "text" }
+          - {
+              label: "Office Team Note",
+              name: "officeTeamNote",
+              widget: "text",
+              hint: "Sentence under the Site Managers grid about the rest of the office team.",
+            }
 
   - name: "services"
     label: "Services"
+    description: "The 5 services listed on the homepage and the /services page. Reorder by dragging; add or remove as needed."
     files:
       - name: "services"
         label: "Services List"
@@ -111,14 +230,39 @@ collections:
             label: "Services"
             widget: "list"
             top_level_label: false
+            label_singular: "Service"
+            summary: "{{fields.title}}"
             fields:
-              - { label: "Slug (unique, no spaces)", name: "slug", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Short Summary", name: "summary", widget: "text" }
-              - { label: "Full Description", name: "body", widget: "text" }
+              - {
+                  label: "Slug",
+                  name: "slug",
+                  widget: "string",
+                  hint: "Internal ID only, not shown to visitors. Lowercase, words separated by dashes, e.g. \"fire-alarm-services\". Must be unique.",
+                  pattern:
+                    ["^[a-z0-9]+(-[a-z0-9]+)*$", "Lowercase letters, numbers and dashes only, no spaces"],
+                }
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "string",
+                  hint: "Shown as the service name.",
+                }
+              - {
+                  label: "Short Summary",
+                  name: "summary",
+                  widget: "text",
+                  hint: "One sentence, shown on the homepage service cards.",
+                }
+              - {
+                  label: "Full Description",
+                  name: "body",
+                  widget: "text",
+                  hint: "Longer paragraph, shown on the Services page.",
+                }
 
   - name: "projects"
     label: "Projects"
+    description: "The project gallery shown on the homepage and /projects page. Reorder by dragging; add or remove as needed."
     files:
       - name: "projects"
         label: "Projects List"
@@ -128,9 +272,33 @@ collections:
             label: "Projects"
             widget: "list"
             top_level_label: false
+            label_singular: "Project"
+            summary: "{{fields.name}}"
             fields:
-              - { label: "Slug (unique, no spaces)", name: "slug", widget: "string" }
-              - { label: "Project Name", name: "name", widget: "string" }
-              - { label: "Category", name: "category", widget: "string" }
+              - {
+                  label: "Slug",
+                  name: "slug",
+                  widget: "string",
+                  hint: "Internal ID only, not shown to visitors. Lowercase, words separated by dashes, e.g. \"paddy-power\". Must be unique.",
+                  pattern:
+                    ["^[a-z0-9]+(-[a-z0-9]+)*$", "Lowercase letters, numbers and dashes only, no spaces"],
+                }
+              - {
+                  label: "Project Name",
+                  name: "name",
+                  widget: "string",
+                  hint: "The client or project name, shown on the card.",
+                }
+              - {
+                  label: "Category",
+                  name: "category",
+                  widget: "string",
+                  hint: "Small tag above the project name, e.g. \"Office Fit-Out\".",
+                }
               - { label: "Summary", name: "summary", widget: "text" }
-              - { label: "Image", name: "image", widget: "image" }
+              - {
+                  label: "Image",
+                  name: "image",
+                  widget: "image",
+                  hint: "Landscape photo works best (roughly 4:3, e.g. 1200x900px or similar). Click to upload a new one.",
+                }
