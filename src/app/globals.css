@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #14212f;
+
+  /* Brand navy, taken from the TES logo */
+  --color-navy-50: #eef2f6;
+  --color-navy-100: #d6e0ea;
+  --color-navy-200: #adc1d5;
+  --color-navy-300: #84a3c0;
+  --color-navy-400: #5b84ab;
+  --color-navy-500: #3c6790;
+  --color-navy-600: #284c6f;
+  --color-navy-700: #203d59;
+  --color-navy-800: #182e43;
+  --color-navy-900: #101f2d;
+  --color-navy-950: #0a141d;
+
+  /* Amber accent: reads as "live wire" / hazard-tape energy against the navy */
+  --color-amber-50: #fff8e6;
+  --color-amber-100: #ffecb3;
+  --color-amber-200: #ffdd7a;
+  --color-amber-300: #ffcc42;
+  --color-amber-400: #ffbe1a;
+  --color-amber-500: #f5a800;
+  --color-amber-600: #cc8b00;
+  --color-amber-700: #a36e00;
+  --color-amber-800: #7a5200;
+  --color-amber-900: #523700;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-navy-50: var(--color-navy-50);
+  --color-navy-100: var(--color-navy-100);
+  --color-navy-200: var(--color-navy-200);
+  --color-navy-300: var(--color-navy-300);
+  --color-navy-400: var(--color-navy-400);
+  --color-navy-500: var(--color-navy-500);
+  --color-navy-600: var(--color-navy-600);
+  --color-navy-700: var(--color-navy-700);
+  --color-navy-800: var(--color-navy-800);
+  --color-navy-900: var(--color-navy-900);
+  --color-navy-950: var(--color-navy-950);
+
+  --color-amber-50: var(--color-amber-50);
+  --color-amber-100: var(--color-amber-100);
+  --color-amber-200: var(--color-amber-200);
+  --color-amber-300: var(--color-amber-300);
+  --color-amber-400: var(--color-amber-400);
+  --color-amber-500: var(--color-amber-500);
+  --color-amber-600: var(--color-amber-600);
+  --color-amber-700: var(--color-amber-700);
+  --color-amber-800: var(--color-amber-800);
+  --color-amber-900: var(--color-amber-900);
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-oswald);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.container-tes {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .container-tes {
+    padding-inline: 2rem;
+  }
+}

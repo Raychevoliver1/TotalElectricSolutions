@@ -1,0 +1,98 @@
+import Link from "next/link";
+import Image from "next/image";
+import { getSite } from "@/lib/content";
+
+const NAV_LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/about/", label: "About" },
+  { href: "/services/", label: "Services" },
+  { href: "/projects/", label: "Projects" },
+  { href: "/training-apprenticeships/", label: "Training & Apprenticeships" },
+  { href: "/contact/", label: "Contact" },
+];
+
+export default function Footer() {
+  const site = getSite();
+  const year = new Date().getFullYear();
+
+  return (
+    <footer className="bg-navy-950 text-navy-100">
+      <div className="container-tes py-14 grid gap-10 md:grid-cols-4">
+        <div className="md:col-span-2">
+          <Image
+            src="/images/brand/logo.svg"
+            alt={site.companyName}
+            width={160}
+            height={112}
+            className="h-12 w-auto mb-4 brightness-0 invert"
+          />
+          <p className="max-w-sm text-sm text-navy-300">{site.heroSubheading}</p>
+          <div className="mt-6 flex items-center gap-4">
+            <Image
+              src="/images/brand/niceic-logo.svg"
+              alt="NICEIC approved contractor"
+              width={220}
+              height={80}
+              className="h-14 w-auto"
+            />
+            <Image
+              src="/images/brand/small-awards-logo.jpg"
+              alt="Small Awards - Top 5 Small Family Business 2017"
+              width={90}
+              height={60}
+              className="h-14 w-auto rounded"
+            />
+          </div>
+        </div>
+
+        <div>
+          <h3 className="font-display text-sm font-semibold uppercase tracking-widest text-white">
+            Menu
+          </h3>
+          <ul className="mt-4 space-y-2 text-sm text-navy-300">
+            {NAV_LINKS.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-amber-400 transition-colors">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="font-display text-sm font-semibold uppercase tracking-widest text-white">
+            Get in touch
+          </h3>
+          <ul className="mt-4 space-y-3 text-sm text-navy-300">
+            <li>
+              <a href={site.phoneHref} className="hover:text-amber-400 transition-colors">
+                {site.phone}
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${site.email}`} className="hover:text-amber-400 transition-colors break-all">
+                {site.email}
+              </a>
+            </li>
+            {site.offices.map((office) => (
+              <li key={office.name}>
+                <p className="font-semibold text-navy-200">{office.name}</p>
+                <p>{office.address.join(", ")}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-navy-800">
+        <div className="container-tes py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-navy-400">
+          <p>
+            &copy; {year} {site.legalName}. All rights reserved.
+          </p>
+          <p>{site.footerNote}</p>
+        </div>
+      </div>
+    </footer>
+  );
+}

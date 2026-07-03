@@ -1,0 +1,136 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# After deploying to Netlify, enable Identity + Git Gateway in the Netlify
+# site dashboard (Site configuration > Identity, and Identity > Services >
+# Git Gateway), then invite editors as Identity users. See HANDOFF.md.
+
+publish_mode: simple
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "site"
+    label: "Site Settings"
+    files:
+      - name: "site"
+        label: "Company Info & Homepage"
+        file: "content/site.json"
+        fields:
+          - { label: "Company Name", name: "companyName", widget: "string" }
+          - { label: "Legal Name", name: "legalName", widget: "string" }
+          - { label: "Founded (Year)", name: "founded", widget: "number", value_type: "int" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Hero Heading", name: "heroHeading", widget: "string" }
+          - { label: "Hero Subheading", name: "heroSubheading", widget: "text" }
+          - { label: "Phone (display)", name: "phone", widget: "string" }
+          - { label: "Phone (tel: link)", name: "phoneHref", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+          - label: "Offices"
+            name: "offices"
+            widget: "list"
+            fields:
+              - { label: "Office Name", name: "name", widget: "string" }
+              - { label: "Town", name: "town", widget: "string" }
+              - label: "Address Lines"
+                name: "address"
+                widget: "list"
+                field: { label: "Line", name: "line", widget: "string" }
+          - label: "Stats (homepage numbers)"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "Why Choose Us"
+            name: "whyChooseUs"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+          - { label: "Recognition line", name: "recognition", widget: "string" }
+          - { label: "Footer Note", name: "footerNote", widget: "string" }
+
+  - name: "about"
+    label: "About Page"
+    files:
+      - name: "about"
+        label: "About Page Content"
+        file: "content/about.json"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - { label: "Approach", name: "approach", widget: "text" }
+          - { label: "Values", name: "values", widget: "text" }
+          - { label: "Recognition Heading", name: "recognitionHeading", widget: "string" }
+          - { label: "Recognition Body", name: "recognitionBody", widget: "text" }
+
+  - name: "training"
+    label: "Training & Apprenticeships Page"
+    files:
+      - name: "training"
+        label: "Training Page Content"
+        file: "content/training.json"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - { label: "Body", name: "body", widget: "text" }
+          - { label: "Call To Action", name: "cta", widget: "text" }
+
+  - name: "team"
+    label: "Team"
+    files:
+      - name: "team"
+        label: "Leadership & Site Team"
+        file: "content/team.json"
+        fields:
+          - label: "Leadership"
+            name: "leadership"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+          - label: "Site Managers"
+            name: "siteManagers"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+          - { label: "Office Team Note", name: "officeTeamNote", widget: "text" }
+
+  - name: "services"
+    label: "Services"
+    files:
+      - name: "services"
+        label: "Services List"
+        file: "content/services.json"
+        fields:
+          - name: "services"
+            label: "Services"
+            widget: "list"
+            top_level_label: false
+            fields:
+              - { label: "Slug (unique, no spaces)", name: "slug", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Short Summary", name: "summary", widget: "text" }
+              - { label: "Full Description", name: "body", widget: "text" }
+
+  - name: "projects"
+    label: "Projects"
+    files:
+      - name: "projects"
+        label: "Projects List"
+        file: "content/projects.json"
+        fields:
+          - name: "projects"
+            label: "Projects"
+            widget: "list"
+            top_level_label: false
+            fields:
+              - { label: "Slug (unique, no spaces)", name: "slug", widget: "string" }
+              - { label: "Project Name", name: "name", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }

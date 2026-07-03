@@ -1,0 +1,46 @@
+{
+  "projects": [
+    {
+      "slug": "tagwright",
+      "name": "Tagwright",
+      "category": "Lighting",
+      "summary": "Commercial lighting project for Tagwright's office space.",
+      "image": "/images/projects/tagwright.jpg"
+    },
+    {
+      "slug": "the-trampery",
+      "name": "The Trampery",
+      "category": "Office Lighting",
+      "summary": "Office lighting installation for The Trampery's workspace.",
+      "image": "/images/projects/the-trampery.jpg"
+    },
+    {
+      "slug": "capco",
+      "name": "Capco",
+      "category": "Office Lighting Solutions",
+      "summary": "Office lighting design and installation for Capco.",
+      "image": "/images/projects/capco.jpg"
+    },
+    {
+      "slug": "john-brown-media",
+      "name": "John Brown Media",
+      "category": "Interior Lighting",
+      "summary": "Interior lighting project for John Brown Media's offices.",
+      "image": "/images/projects/john-brown-media.jpg"
+    },
+    {
+      "slug": "stephens-investment",
+      "name": "Stephen's Investment",
+      "category": "Commercial Electrical",
+      "summary": "Commercial electrical installation for Stephen's Investment.",
+      "image": "/images/projects/stephens-investment.jpg"
+    },
+    {
+      "slug": "paddy-power",
+      "name": "Paddy Power",
+      "category": "Office Fit-Out",
+      "summary": "Full electrical package for a Paddy Power office fit-out.",
+      "image": "/images/projects/paddy-power.jpg"
+    }
+  ]
+}

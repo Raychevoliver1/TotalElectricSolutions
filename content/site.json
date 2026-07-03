@@ -1,0 +1,46 @@
+{
+  "companyName": "Total Electric Solutions",
+  "legalName": "Total Electric Solutions Ltd",
+  "founded": 2006,
+  "tagline": "Specialising in Providing Services to the Commercial Sector",
+  "heroHeading": "A complete electrical package, from first sketch to final sign-off.",
+  "heroSubheading": "Total Electric Solutions has delivered commercial electrical, lighting and data installations across London and the South East since 2006 — from initial survey and design, through to NICEIC-certified handover.",
+  "phone": "01689 810802",
+  "phoneHref": "tel:01689810802",
+  "email": "info@totalelectricsolutions.co.uk",
+  "linkedin": "https://www.linkedin.com/company/total-electric-solutions-ltd/",
+  "offices": [
+    {
+      "name": "Head Office",
+      "town": "Orpington, Kent",
+      "address": ["Lynwood House", "Crofton Road", "Orpington, Kent", "BR6 8QE"]
+    },
+    {
+      "name": "London Office",
+      "town": "Central London",
+      "address": ["114 The Record Hall", "16-16A Baldwin Gardens", "London", "EC1N 7RJ"]
+    }
+  ],
+  "stats": [
+    { "value": "40+", "label": "years of combined commercial-sector experience" },
+    { "value": "2006", "label": "founded, still family-run today" },
+    { "value": "100%", "label": "in-house project management, survey to sign-off" },
+    { "value": "NICEIC", "label": "certified on every installation" }
+  ],
+  "whyChooseUs": [
+    {
+      "title": "40+ years of commercial experience",
+      "body": "Founded by Ian French in 2006 after decades in office refurbishment, commercial and industrial fit-out, so every project is led by people who have seen it before."
+    },
+    {
+      "title": "Full project management, start to finish",
+      "body": "One team carries a project from the initial building survey and design through tendering, installation, and Building Control sign-off — no handoffs, no gaps."
+    },
+    {
+      "title": "NICEIC certified, always",
+      "body": "Every installation is tested and certified to NICEIC standards, with full documentation, O&M manuals and Building Control paperwork provided as standard."
+    }
+  ],
+  "recognition": "Named one of the UK's top five Small Family Businesses by the Small Awards in 2017.",
+  "footerNote": "Established 2006. Family-run. NICEIC accredited."
+}

@@ -1,0 +1,14 @@
+{
+  "leadership": [
+    { "name": "Ian French", "role": "Owner & Founding Director" },
+    { "name": "Max French", "role": "Managing Director" },
+    { "name": "Susan French", "role": "Finance Director" }
+  ],
+  "siteManagers": [
+    { "name": "Andy Stockford", "role": "Site Manager" },
+    { "name": "Ian Harlow", "role": "Site Manager" },
+    { "name": "Dean Lovelidge", "role": "Site Manager" },
+    { "name": "Taylor Arscott", "role": "Site Manager" }
+  ],
+  "officeTeamNote": "Behind our leadership and site managers, our office team of pre-contracts managers, technical designers, CAD technicians, project managers and accounts support keep every job on track from quote to completion."
+}
