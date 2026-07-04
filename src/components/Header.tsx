@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Icon from "@/components/Icon";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -71,8 +72,9 @@ export default function Header() {
         <div className="hidden lg:flex items-center gap-4">
           <a
             href="tel:01689810802"
-            className="text-sm font-semibold text-navy-900/80 hover:text-navy-600"
+            className="flex items-center gap-1.5 text-sm font-semibold text-navy-900/80 hover:text-navy-600"
           >
+            <Icon name="phone" className="h-4 w-4" />
             01689 810802
           </a>
           <Link

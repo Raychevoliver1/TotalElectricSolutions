@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Icon from "@/components/Icon";
 import { getSite } from "@/lib/content";
 
 const NAV_LINKS = [
@@ -17,7 +18,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-navy-950 text-navy-100">
-      <div className="container-tes py-14 grid gap-10 md:grid-cols-4">
+      <div className="container-tes py-10 sm:py-14 grid gap-8 sm:gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
           <Image
             src="/images/brand/logo.svg"
@@ -66,19 +67,30 @@ export default function Footer() {
           </h3>
           <ul className="mt-4 space-y-3 text-sm text-navy-300">
             <li>
-              <a href={site.phoneHref} className="hover:text-lime-400 transition-colors">
+              <a
+                href={site.phoneHref}
+                className="flex items-center gap-2.5 hover:text-lime-400 transition-colors"
+              >
+                <Icon name="phone" className="h-4 w-4 shrink-0 text-lime-400" />
                 {site.phone}
               </a>
             </li>
             <li>
-              <a href={`mailto:${site.email}`} className="hover:text-lime-400 transition-colors break-all">
+              <a
+                href={`mailto:${site.email}`}
+                className="flex items-center gap-2.5 hover:text-lime-400 transition-colors break-all"
+              >
+                <Icon name="mail" className="h-4 w-4 shrink-0 text-lime-400" />
                 {site.email}
               </a>
             </li>
             {site.offices.map((office) => (
-              <li key={office.name}>
-                <p className="font-semibold text-navy-200">{office.name}</p>
-                <p>{office.address.join(", ")}</p>
+              <li key={office.name} className="flex gap-2.5">
+                <Icon name="map-pin" className="h-4 w-4 shrink-0 text-lime-400 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-navy-200">{office.name}</p>
+                  <p>{office.address.join(", ")}</p>
+                </div>
               </li>
             ))}
           </ul>

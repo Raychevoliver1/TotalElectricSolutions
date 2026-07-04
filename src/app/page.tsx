@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import IconBadge from "@/components/IconBadge";
 import { getSite, getServices, getProjects } from "@/lib/content";
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/95 to-navy-950/70" />
         </div>
 
-        <div className="container-tes relative py-24 lg:py-32">
+        <div className="container-tes relative py-16 sm:py-20 lg:py-32">
           <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-lime-400">
             {site.tagline}
           </p>
@@ -30,7 +31,7 @@ export default function Home() {
             {site.heroHeading}
           </h1>
           <p className="mt-6 max-w-xl text-lg text-navy-200">{site.heroSubheading}</p>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4">
+          <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact/"
               className="inline-flex items-center justify-center rounded-md bg-blue-500 px-7 py-3.5 text-sm font-bold text-white hover:bg-blue-600 transition-colors"
@@ -48,19 +49,23 @@ export default function Home() {
       </section>
 
       <section className="bg-white border-b border-navy-100">
-        <div className="container-tes py-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="container-tes py-6 sm:py-8 grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-6">
           {site.stats.map((stat) => (
-            <div key={stat.label} className="text-center lg:text-left">
-              <p className="font-display text-3xl sm:text-4xl font-bold text-navy-600">
-                {stat.value}
-              </p>
-              <p className="mt-1 text-sm text-navy-900/70">{stat.label}</p>
+            <div key={stat.label} className="flex items-center gap-3">
+              <IconBadge name={stat.icon} variant="navy-outline" size="sm" className="sm:hidden" />
+              <IconBadge name={stat.icon} variant="navy-outline" size="md" className="hidden sm:inline-flex" />
+              <div>
+                <p className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-600 leading-tight">
+                  {stat.value}
+                </p>
+                <p className="text-xs sm:text-sm text-navy-900/70 leading-snug">{stat.label}</p>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-10 sm:py-14 lg:py-20">
         <div className="container-tes">
           <div className="max-w-2xl">
             <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-navy-500">
@@ -71,23 +76,28 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {site.whyChooseUs.map((item, i) => (
-              <div key={item.title} className="rounded-xl border border-navy-100 p-7">
-                <span className="font-display text-4xl font-bold text-blue-500">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 className="mt-4 font-display text-xl font-semibold text-navy-950">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-navy-900/70 leading-relaxed">{item.body}</p>
+          <div className="mt-6 sm:mt-10 lg:mt-12 grid gap-4 sm:gap-6 lg:gap-8 md:grid-cols-3">
+            {site.whyChooseUs.map((item) => (
+              <div
+                key={item.title}
+                className="flex gap-4 rounded-xl border border-navy-100 p-5 sm:p-6 lg:p-7"
+              >
+                <IconBadge name={item.icon} variant="blue" size="lg" className="shrink-0" />
+                <div>
+                  <h3 className="font-display text-lg sm:text-xl font-semibold text-navy-950">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm sm:text-base text-navy-900/70 leading-relaxed">
+                    {item.body}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-navy-50">
+      <section className="py-10 sm:py-14 lg:py-20 bg-navy-50">
         <div className="container-tes">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
             <div className="max-w-2xl">
@@ -106,26 +116,29 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 sm:mt-10 lg:mt-12 grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <Link
                 key={service.slug}
                 href="/services/"
-                className="group rounded-xl bg-white border border-navy-100 p-7 hover:border-blue-400 hover:shadow-lg transition-all"
+                className="group flex gap-4 rounded-xl bg-white border border-navy-100 p-5 sm:p-6 lg:p-7 hover:border-blue-400 hover:shadow-lg transition-all"
               >
-                <h3 className="font-display text-lg font-semibold text-navy-950 group-hover:text-navy-600">
-                  {service.title}
-                </h3>
-                <p className="mt-3 text-sm text-navy-900/70 leading-relaxed">
-                  {service.summary}
-                </p>
+                <IconBadge name={service.icon} variant="navy" size="md" className="shrink-0" />
+                <div>
+                  <h3 className="font-display text-lg font-semibold text-navy-950 group-hover:text-navy-600">
+                    {service.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-navy-900/70 leading-relaxed">
+                    {service.summary}
+                  </p>
+                </div>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-10 sm:py-14 lg:py-20">
         <div className="container-tes">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
             <div className="max-w-2xl">
@@ -144,7 +157,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 sm:mt-10 lg:mt-12 grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
               <Link
                 key={project.slug}

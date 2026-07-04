@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import type { IconName } from "@/lib/icons";
 
 function readJson<T>(file: string): T {
   const filePath = path.join(process.cwd(), "content", file);
@@ -16,11 +17,13 @@ export type Office = {
 export type Stat = {
   value: string;
   label: string;
+  icon: IconName;
 };
 
 export type WhyChooseUsItem = {
   title: string;
   body: string;
+  icon: IconName;
 };
 
 export type SiteContent = {
@@ -46,6 +49,7 @@ export type Service = {
   title: string;
   summary: string;
   body: string;
+  icon: IconName;
 };
 
 export type Project = {

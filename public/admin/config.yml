@@ -112,6 +112,32 @@ collections:
                   widget: "string",
                   hint: "The small text underneath the number.",
                 }
+              - &icon_field
+                label: "Icon"
+                name: "icon"
+                widget: "select"
+                hint: "The small icon shown with this item."
+                options: &icon_options
+                  - { label: "Lightbulb (lighting)", value: "lightbulb" }
+                  - { label: "Shield Check (certified/safety)", value: "shield-check" }
+                  - { label: "Clipboard (survey/design)", value: "clipboard" }
+                  - { label: "Network (data/IT)", value: "network" }
+                  - { label: "Flame (fire alarm)", value: "flame" }
+                  - { label: "Clock (experience/years)", value: "clock" }
+                  - { label: "Calendar (founded/date)", value: "calendar" }
+                  - { label: "Award (recognition)", value: "award" }
+                  - { label: "Users (team/people)", value: "users" }
+                  - { label: "Building (offices/commercial)", value: "building" }
+                  - { label: "Map Pin (location)", value: "map-pin" }
+                  - { label: "Phone (contact)", value: "phone" }
+                  - { label: "Mail (email)", value: "mail" }
+                  - { label: "Check Circle (general tick)", value: "check" }
+                  - { label: "Zap (electrical/power)", value: "zap" }
+                  - { label: "Wrench (installation)", value: "wrench" }
+                  - { label: "Hard Hat (site work)", value: "hard-hat" }
+                  - { label: "Ruler (design/measurement)", value: "ruler" }
+                  - { label: "Certificate (documentation)", value: "certificate" }
+                  - { label: "Graduation Cap (training)", value: "graduation-cap" }
           - label: "Why Choose Us"
             name: "whyChooseUs"
             widget: "list"
@@ -121,6 +147,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Body", name: "body", widget: "text" }
+              - *icon_field
           - {
               label: "Recognition line",
               name: "recognition",
@@ -259,6 +286,7 @@ collections:
                   widget: "text",
                   hint: "Longer paragraph, shown on the Services page.",
                 }
+              - *icon_field
 
   - name: "projects"
     label: "Projects"

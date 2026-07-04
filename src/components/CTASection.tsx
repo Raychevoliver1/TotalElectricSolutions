@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Icon from "@/components/Icon";
 import { getSite } from "@/lib/content";
 
 export default function CTASection() {
@@ -6,7 +7,7 @@ export default function CTASection() {
 
   return (
     <section className="bg-navy-950">
-      <div className="container-tes py-14 flex flex-col lg:flex-row items-center justify-between gap-6 text-center lg:text-left">
+      <div className="container-tes py-10 sm:py-14 flex flex-col lg:flex-row items-center justify-between gap-6 text-center lg:text-left">
         <div>
           <h2 className="font-display text-2xl sm:text-3xl font-semibold text-white">
             Ready to talk about your project?
@@ -25,8 +26,9 @@ export default function CTASection() {
           </Link>
           <a
             href={site.phoneHref}
-            className="inline-flex items-center justify-center rounded-md border-2 border-white/40 px-6 py-3 text-sm font-bold text-white hover:bg-white hover:text-navy-950 transition-colors"
+            className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-white/40 px-6 py-3 text-sm font-bold text-white hover:bg-white hover:text-navy-950 transition-colors"
           >
+            <Icon name="phone" className="h-4 w-4" />
             Call {site.phone}
           </a>
         </div>

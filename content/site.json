@@ -22,23 +22,26 @@
     }
   ],
   "stats": [
-    { "value": "40+", "label": "years of combined commercial-sector experience" },
-    { "value": "2006", "label": "founded, still family-run today" },
-    { "value": "100%", "label": "in-house project management, survey to sign-off" },
-    { "value": "NICEIC", "label": "certified on every installation" }
+    { "value": "40+", "label": "years of combined commercial-sector experience", "icon": "clock" },
+    { "value": "2006", "label": "founded, still family-run today", "icon": "calendar" },
+    { "value": "100%", "label": "in-house project management, survey to sign-off", "icon": "clipboard" },
+    { "value": "NICEIC", "label": "certified on every installation", "icon": "shield-check" }
   ],
   "whyChooseUs": [
     {
       "title": "40+ years of commercial experience",
-      "body": "Founded by Ian French in 2006 after decades in office refurbishment, commercial and industrial fit-out, so every project is led by people who have seen it before."
+      "body": "Founded by Ian French in 2006 after decades in office refurbishment, commercial and industrial fit-out, so every project is led by people who have seen it before.",
+      "icon": "hard-hat"
     },
     {
       "title": "Full project management, start to finish",
-      "body": "One team carries a project from the initial building survey and design through tendering, installation, and Building Control sign-off — no handoffs, no gaps."
+      "body": "One team carries a project from the initial building survey and design through tendering, installation, and Building Control sign-off — no handoffs, no gaps.",
+      "icon": "clipboard"
     },
     {
       "title": "NICEIC certified, always",
-      "body": "Every installation is tested and certified to NICEIC standards, with full documentation, O&M manuals and Building Control paperwork provided as standard."
+      "body": "Every installation is tested and certified to NICEIC standards, with full documentation, O&M manuals and Building Control paperwork provided as standard.",
+      "icon": "shield-check"
     }
   ],
   "recognition": "Named one of the UK's top five Small Family Businesses by the Small Awards in 2017.",

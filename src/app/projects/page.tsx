@@ -21,8 +21,8 @@ export default function ProjectsPage() {
         subtitle="A selection of the commercial electrical and lighting installations we've delivered for clients across London and the South East."
       />
 
-      <section className="py-20">
-        <div className="container-tes grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="py-10 sm:py-14 lg:py-20">
+        <div className="container-tes grid gap-5 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <div key={project.slug} className="group overflow-hidden rounded-xl border border-navy-100">
               <div className="relative aspect-[4/3] overflow-hidden">
