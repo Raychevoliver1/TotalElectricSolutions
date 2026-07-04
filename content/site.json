@@ -17,9 +17,17 @@
     },
     {
       "name": "London Office",
-      "town": "Central London",
-      "address": ["114 The Record Hall", "16-16A Baldwin Gardens", "London", "EC1N 7RJ"]
+      "town": "Farringdon, London",
+      "address": ["60 Greys Inn Road", "Farringdon", "London"]
     }
+  ],
+  "clients": [
+    "Paddy Power",
+    "Capco",
+    "John Brown Media",
+    "The Trampery",
+    "Tagwright",
+    "Stephen's Investment"
   ],
   "stats": [
     { "value": "40+", "label": "years of combined commercial-sector experience", "icon": "clock" },

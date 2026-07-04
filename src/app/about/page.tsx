@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import TeamCard from "@/components/TeamCard";
 import IconBadge from "@/components/IconBadge";
+import Timeline from "@/components/Timeline";
 import { getAbout, getTeam } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -25,16 +26,17 @@ export default function AboutPage() {
       />
 
       <section className="py-10 sm:py-14 lg:py-20">
-        <div className="container-tes grid gap-8 lg:gap-12 lg:grid-cols-2 lg:items-center">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-            <Image
-              src="/images/team-shot.jpg"
-              alt="The Total Electric Solutions team"
-              fill
-              className="object-cover"
-            />
+        <div className="container-tes grid gap-10 lg:gap-16 lg:grid-cols-2 lg:items-start">
+          <div>
+            <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-navy-500">
+              Our Story
+            </p>
+            <h2 className="mt-3 mb-8 font-display text-2xl sm:text-3xl font-semibold text-navy-950">
+              Two decades on the tools
+            </h2>
+            <Timeline milestones={about.milestones} />
           </div>
-          <div className="space-y-6">
+          <div className="space-y-6 lg:pt-20">
             <div className="flex gap-4">
               <IconBadge name="ruler" variant="navy" size="md" className="shrink-0" />
               <div>

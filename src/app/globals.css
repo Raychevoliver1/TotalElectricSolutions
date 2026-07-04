@@ -89,6 +89,48 @@ body {
   border-radius: 2px;
 }
 
+/* Light pulse travelling along circuit traces (CircuitBackdrop) */
+.circuit-pulse {
+  stroke-dasharray: 60 940;
+  stroke-dashoffset: 1000;
+  animation: circuit-travel 7s linear infinite;
+  filter: drop-shadow(0 0 4px var(--color-lime-400));
+}
+
+.circuit-pulse-delayed {
+  animation-delay: 3.5s;
+}
+
+@keyframes circuit-travel {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Continuous client-name marquee; duplicated content makes the -50% loop seamless */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* If motion is reduced the marquee animation is frozen at 0 — allow manual scroll instead */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-viewport {
+    overflow-x: auto;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

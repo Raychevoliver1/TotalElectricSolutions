@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import IconBadge from "@/components/IconBadge";
+import CircuitBackdrop from "@/components/CircuitBackdrop";
+import ClientMarquee from "@/components/ClientMarquee";
 import { getSite, getServices, getProjects } from "@/lib/content";
 
 export default function Home() {
@@ -21,6 +23,7 @@ export default function Home() {
             className="object-cover opacity-30"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/95 to-navy-950/70" />
+          <CircuitBackdrop className="hidden sm:block absolute inset-y-0 right-0 h-full w-full max-w-3xl text-navy-300" />
         </div>
 
         <div className="container-tes relative py-16 sm:py-20 lg:py-32">
@@ -47,6 +50,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ClientMarquee />
 
       <section className="bg-white border-b border-navy-100">
         <div className="container-tes py-6 sm:py-8 grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-6">
@@ -121,8 +126,12 @@ export default function Home() {
               <Link
                 key={service.slug}
                 href="/services/"
-                className="group flex gap-4 rounded-xl bg-white border border-navy-100 p-5 sm:p-6 lg:p-7 hover:border-blue-400 hover:shadow-lg transition-all"
+                className="group relative overflow-hidden flex gap-4 rounded-xl bg-white border border-navy-100 p-5 sm:p-6 lg:p-7 hover:border-blue-400 hover:shadow-lg transition-all"
               >
+                <span
+                  aria-hidden="true"
+                  className="absolute bottom-0 left-0 h-1 w-0 bg-lime-400 transition-all duration-300 group-hover:w-full"
+                />
                 <IconBadge name={service.icon} variant="navy" size="md" className="shrink-0" />
                 <div>
                   <h3 className="font-display text-lg font-semibold text-navy-950 group-hover:text-navy-600">
@@ -171,6 +180,10 @@ export default function Home() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/10 to-transparent" />
+                <span
+                  aria-hidden="true"
+                  className="absolute bottom-0 left-0 h-1 w-0 bg-lime-400 transition-all duration-300 group-hover:w-full"
+                />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <p className="text-xs font-semibold uppercase tracking-widest text-lime-400">
                     {project.category}

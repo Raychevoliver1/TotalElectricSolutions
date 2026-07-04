@@ -93,6 +93,11 @@ collections:
                 widget: "list"
                 hint: "One line of the address per entry — building, street, town, postcode."
                 field: { label: "Line", name: "line", widget: "string" }
+          - label: "Client Names (scrolling strip)"
+            name: "clients"
+            widget: "list"
+            hint: "Shown in the moving \"trusted by\" strip under the homepage banner."
+            field: { label: "Client", name: "client", widget: "string" }
           - label: "Homepage Stats"
             name: "stats"
             widget: "list"
@@ -195,6 +200,21 @@ collections:
               widget: "text",
               hint: "The Small Awards recognition callout box.",
             }
+          - label: "Company Timeline"
+            name: "milestones"
+            widget: "list"
+            label_singular: "Milestone"
+            summary: "{{fields.year}} — {{fields.title}}"
+            hint: "The \"Our Story\" timeline on the About page, oldest first."
+            fields:
+              - {
+                  label: "Year",
+                  name: "year",
+                  widget: "string",
+                  hint: "e.g. \"2006\", \"2017\" or \"Today\"",
+                }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
 
   - name: "training"
     label: "Training & Apprenticeships Page"

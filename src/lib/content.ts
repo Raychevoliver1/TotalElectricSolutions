@@ -38,6 +38,7 @@ export type SiteContent = {
   email: string;
   linkedin: string;
   offices: Office[];
+  clients: string[];
   stats: Stat[];
   whyChooseUs: WhyChooseUsItem[];
   recognition: string;
@@ -71,6 +72,12 @@ export type TeamContent = {
   officeTeamNote: string;
 };
 
+export type Milestone = {
+  year: string;
+  title: string;
+  body: string;
+};
+
 export type AboutContent = {
   heading: string;
   intro: string;
@@ -78,6 +85,7 @@ export type AboutContent = {
   values: string;
   recognitionHeading: string;
   recognitionBody: string;
+  milestones: Milestone[];
 };
 
 export type TrainingContent = {

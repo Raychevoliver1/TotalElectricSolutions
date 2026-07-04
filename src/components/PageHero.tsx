@@ -1,3 +1,5 @@
+import CircuitBackdrop from "@/components/CircuitBackdrop";
+
 export default function PageHero({
   eyebrow,
   title,
@@ -8,8 +10,9 @@ export default function PageHero({
   subtitle?: string;
 }) {
   return (
-    <section className="bg-navy-950 text-white">
-      <div className="container-tes py-10 sm:py-14 lg:py-20">
+    <section className="relative overflow-hidden bg-navy-950 text-white">
+      <CircuitBackdrop className="hidden sm:block absolute inset-y-0 right-0 h-full w-full max-w-2xl text-navy-300" />
+      <div className="container-tes relative py-10 sm:py-14 lg:py-20">
         <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-lime-400">
           {eyebrow}
         </p>
