@@ -236,34 +236,29 @@ collections:
 
   - name: "team"
     label: "Team"
-    description: "People shown on the About page. Everyone gets a coloured initials badge instead of a photo, so you only need a name and role — no image to upload or resize."
+    description: "People shown on the About page. Everyone gets a coloured initials badge instead of a photo, so you only need a name and role, with no image to upload or resize. Drag to reorder within each group."
     files:
       - name: "team"
-        label: "Leadership & Site Team"
+        label: "Office & On-Site Team"
         file: "content/team.json"
         fields:
-          - label: "Leadership"
-            name: "leadership"
+          - label: "Office Team"
+            name: "officeTeam"
             widget: "list"
             label_singular: "Person"
-            summary: "{{fields.name}} — {{fields.role}}"
+            summary: "{{fields.name}} - {{fields.role}}"
+            hint: "Directors first, then the rest of the office team."
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Role", name: "role", widget: "string" }
-          - label: "Site Managers"
-            name: "siteManagers"
+          - label: "On-Site Team"
+            name: "onSiteTeam"
             widget: "list"
             label_singular: "Person"
-            summary: "{{fields.name}} — {{fields.role}}"
+            summary: "{{fields.name}} - {{fields.role}}"
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Role", name: "role", widget: "string" }
-          - {
-              label: "Office Team Note",
-              name: "officeTeamNote",
-              widget: "text",
-              hint: "Sentence under the Site Managers grid about the rest of the office team.",
-            }
 
   - name: "services"
     label: "Services"

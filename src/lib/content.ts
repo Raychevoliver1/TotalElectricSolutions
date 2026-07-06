@@ -67,9 +67,8 @@ export type TeamMember = {
 };
 
 export type TeamContent = {
-  leadership: TeamMember[];
-  siteManagers: TeamMember[];
-  officeTeamNote: string;
+  officeTeam: TeamMember[];
+  onSiteTeam: TeamMember[];
 };
 
 export type Milestone = {

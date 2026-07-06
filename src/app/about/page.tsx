@@ -83,30 +83,26 @@ export default function AboutPage() {
 
       <section className="py-10 sm:py-14 lg:py-20">
         <div className="container-tes">
-          <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-navy-500">
+          <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
             Our People
           </p>
-          <h2 className="mt-3 font-display text-3xl sm:text-4xl font-semibold text-navy-950">
-            Leadership
+          <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold text-navy-950">
+            Our Office Team
           </h2>
           <div className="mt-6 sm:mt-8 grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {team.leadership.map((member) => (
+            {team.officeTeam.map((member) => (
               <TeamCard key={member.name} member={member} />
             ))}
           </div>
 
-          <h2 className="mt-10 sm:mt-16 font-display text-3xl sm:text-4xl font-semibold text-navy-950">
-            Site Managers
+          <h2 className="mt-10 sm:mt-16 font-display text-3xl sm:text-4xl font-bold text-navy-950">
+            Our On-Site Team
           </h2>
           <div className="mt-6 sm:mt-8 grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {team.siteManagers.map((member) => (
+            {team.onSiteTeam.map((member) => (
               <TeamCard key={member.name} member={member} />
             ))}
           </div>
-
-          <p className="mt-8 sm:mt-10 max-w-3xl text-navy-900/70 leading-relaxed">
-            {team.officeTeamNote}
-          </p>
         </div>
       </section>
 

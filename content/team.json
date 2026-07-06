@@ -1,14 +1,23 @@
 {
-  "leadership": [
+  "officeTeam": [
     { "name": "Ian French", "role": "Owner & Founding Director" },
     { "name": "Max French", "role": "Managing Director" },
-    { "name": "Susan French", "role": "Finance Director" }
+    { "name": "Susan French", "role": "Finance Director" },
+    { "name": "Charlotte French", "role": "Pre-Contracts Manager" },
+    { "name": "Ellis Peter", "role": "Pre-Contracts Manager" },
+    { "name": "Owen Thomas", "role": "Technical Services Manager" },
+    { "name": "Edward French", "role": "Technical Designer" },
+    { "name": "Dylan Bains", "role": "CAD Technical Drawer" },
+    { "name": "Antony De Luca", "role": "Project Director" },
+    { "name": "Joe French", "role": "Project Manager" },
+    { "name": "Jack Cameron", "role": "Project Manager" },
+    { "name": "Lee Fabro", "role": "Project Manager" },
+    { "name": "Sophie Hunter", "role": "Accounts Assistant" }
   ],
-  "siteManagers": [
-    { "name": "Andy Stockford", "role": "Site Manager" },
-    { "name": "Ian Harlow", "role": "Site Manager" },
-    { "name": "Dean Lovelidge", "role": "Site Manager" },
+  "onSiteTeam": [
+    { "name": "Andy Stockford", "role": "Senior Site Manager" },
+    { "name": "Ian Harlow", "role": "Senior Site Manager" },
+    { "name": "Dean Lovelidge", "role": "Senior Site Manager" },
     { "name": "Taylor Arscott", "role": "Site Manager" }
-  ],
-  "officeTeamNote": "Behind our leadership and site managers, our office team of pre-contracts managers, technical designers, CAD technicians, project managers and accounts support keep every job on track from quote to completion."
+  ]
 }
