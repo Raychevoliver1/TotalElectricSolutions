@@ -19,7 +19,7 @@ export default function ClientMarquee() {
                   key={client}
                   className="flex items-center gap-3 px-6 sm:px-10 font-display text-lg sm:text-xl font-semibold uppercase tracking-wide text-navy-200 whitespace-nowrap"
                 >
-                  <Icon name="zap" className="h-4 w-4 text-lime-400" />
+                  <Icon name="zap" className="h-4 w-4 text-blue-400" />
                   {client}
                 </li>
               ))}

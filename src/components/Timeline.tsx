@@ -12,8 +12,8 @@ export default function Timeline({ milestones }: { milestones: Milestone[] }) {
               aria-hidden="true"
               className={`absolute -left-[41px] top-1 flex h-4 w-4 items-center justify-center rounded-full border-2 ${
                 isLast
-                  ? "border-lime-400 bg-lime-400 shadow-[0_0_10px_2px_rgba(190,209,48,0.5)]"
-                  : "border-blue-500 bg-white"
+                  ? "border-blue-400 bg-blue-400 shadow-[0_0_10px_2px_rgba(61,147,255,0.55)]"
+                  : "border-blue-600 bg-white"
               }`}
             />
             <p className="font-display text-sm font-bold uppercase tracking-widest text-blue-600">

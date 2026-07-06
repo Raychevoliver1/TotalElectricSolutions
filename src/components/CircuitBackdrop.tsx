@@ -1,6 +1,6 @@
 /**
  * Decorative circuit-board traces with a light pulse travelling along the
- * wires. Purely presentational — hidden from assistive tech, and the pulse
+ * wires. Purely presentational, hidden from assistive tech, and the pulse
  * animation is disabled by the global prefers-reduced-motion rule.
  */
 export default function CircuitBackdrop({ className = "" }: { className?: string }) {
@@ -33,14 +33,14 @@ export default function CircuitBackdrop({ className = "" }: { className?: string
       {/* travelling pulses */}
       <path
         d="M600 40 H420 a12 12 0 0 0-12 12 V150 a12 12 0 0 1-12 12 H240"
-        stroke="var(--color-lime-400)"
+        stroke="var(--color-blue-400)"
         strokeWidth="2.5"
         strokeLinecap="round"
         className="circuit-pulse"
       />
       <path
         d="M600 340 H440 a12 12 0 0 1-12-12 V240 a12 12 0 0 0-12-12 H330"
-        stroke="var(--color-lime-400)"
+        stroke="var(--color-blue-400)"
         strokeWidth="2.5"
         strokeLinecap="round"
         className="circuit-pulse circuit-pulse-delayed"

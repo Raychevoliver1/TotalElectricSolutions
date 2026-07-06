@@ -2,11 +2,10 @@ import Icon from "@/components/Icon";
 import type { IconName } from "@/lib/icons";
 
 const VARIANTS = {
-  navy: "bg-navy-600 text-white",
-  blue: "bg-blue-500 text-white",
-  lime: "bg-lime-400 text-navy-950",
-  "navy-outline": "bg-navy-50 text-navy-600",
-  "on-dark": "bg-white/10 text-lime-400",
+  navy: "bg-navy-700 text-white",
+  blue: "bg-blue-600 text-white",
+  "navy-outline": "bg-navy-50 text-navy-700",
+  "on-dark": "bg-white/10 text-blue-300",
 } as const;
 
 const SIZES = {

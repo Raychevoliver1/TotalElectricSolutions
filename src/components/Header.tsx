@@ -37,15 +37,26 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-navy-100">
       <div className="container-tes flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 shrink-0" onClick={() => setOpen(false)}>
+        <Link
+          href="/"
+          aria-label="Total Electric Solutions, home"
+          className="flex items-center gap-3 shrink-0"
+          onClick={() => setOpen(false)}
+        >
           <Image
-            src="/images/brand/logo.svg"
-            alt="Total Electric Solutions"
-            width={160}
-            height={112}
-            className="h-12 w-auto"
+            src="/images/brand/logo-mark.svg"
+            alt=""
+            width={44}
+            height={102}
+            className="h-11 w-auto"
             priority
           />
+          <span className="font-display font-bold leading-none text-navy-950">
+            <span className="block text-lg sm:text-xl tracking-tight">Total Electric</span>
+            <span className="block text-xs sm:text-sm font-semibold uppercase tracking-[0.28em] text-blue-600">
+              Solutions
+            </span>
+          </span>
         </Link>
 
         <nav aria-label="Primary" className="hidden lg:flex items-center gap-8">
@@ -79,7 +90,7 @@ export default function Header() {
           </a>
           <Link
             href="/contact/"
-            className="inline-flex items-center rounded-md bg-blue-500 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-blue-600"
+            className="inline-flex items-center rounded-md bg-blue-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-blue-700"
           >
             Get a Quote
           </Link>
@@ -131,7 +142,7 @@ export default function Header() {
             <Link
               href="/contact/"
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center rounded-md bg-blue-500 px-5 py-3 text-sm font-bold text-white"
+              className="mt-4 inline-flex items-center justify-center rounded-md bg-blue-600 px-5 py-3 text-sm font-bold text-white"
             >
               Get a Quote
             </Link>

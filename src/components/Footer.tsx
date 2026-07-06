@@ -53,7 +53,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-2 text-sm text-navy-300">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="hover:text-lime-400 transition-colors">
+                <Link href={link.href} className="hover:text-blue-400 transition-colors">
                   {link.label}
                 </Link>
               </li>
@@ -69,24 +69,24 @@ export default function Footer() {
             <li>
               <a
                 href={site.phoneHref}
-                className="flex items-center gap-2.5 hover:text-lime-400 transition-colors"
+                className="flex items-center gap-2.5 hover:text-blue-400 transition-colors"
               >
-                <Icon name="phone" className="h-4 w-4 shrink-0 text-lime-400" />
+                <Icon name="phone" className="h-4 w-4 shrink-0 text-blue-400" />
                 {site.phone}
               </a>
             </li>
             <li>
               <a
                 href={`mailto:${site.email}`}
-                className="flex items-center gap-2.5 hover:text-lime-400 transition-colors break-all"
+                className="flex items-center gap-2.5 hover:text-blue-400 transition-colors break-all"
               >
-                <Icon name="mail" className="h-4 w-4 shrink-0 text-lime-400" />
+                <Icon name="mail" className="h-4 w-4 shrink-0 text-blue-400" />
                 {site.email}
               </a>
             </li>
             {site.offices.map((office) => (
               <li key={office.name} className="flex gap-2.5">
-                <Icon name="map-pin" className="h-4 w-4 shrink-0 text-lime-400 mt-0.5" />
+                <Icon name="map-pin" className="h-4 w-4 shrink-0 text-blue-400 mt-0.5" />
                 <div>
                   <p className="font-semibold text-navy-200">{office.name}</p>
                   <p>{office.address.join(", ")}</p>

@@ -4,35 +4,30 @@
   --background: #ffffff;
   --foreground: #14212f;
 
-  /* Brand palette — taken directly from the original site's Elementor kit */
-  --color-navy-50: #f0f3f4;
-  --color-navy-100: #d7e0e6;
-  --color-navy-200: #aec1cd;
-  --color-navy-300: #85a2b4;
-  --color-navy-400: #5c839b;
-  --color-navy-500: #3d6483;
-  --color-navy-600: #284c6f;
-  --color-navy-700: #203d5a;
-  --color-navy-800: #182e44;
-  --color-navy-900: #101f2e;
-  --color-navy-950: #042c3e;
+  /* Deep blue used for dark sections, headings and neutrals */
+  --color-navy-50: #eff4fc;
+  --color-navy-100: #dce7f6;
+  --color-navy-200: #bcd1ec;
+  --color-navy-300: #8dabdb;
+  --color-navy-400: #5a86c9;
+  --color-navy-500: #2e68b5;
+  --color-navy-600: #1d5199;
+  --color-navy-700: #163f78;
+  --color-navy-800: #10305c;
+  --color-navy-900: #0b2547;
+  --color-navy-950: #071a35;
 
-  /* Secondary blue — used for buttons/links on the original site */
-  --color-blue-50: #e6f2fa;
-  --color-blue-100: #bfdff2;
-  --color-blue-200: #8cc4e8;
-  --color-blue-300: #59a9dd;
-  --color-blue-400: #268ed3;
-  --color-blue-500: #0071bb;
-  --color-blue-600: #005a94;
-  --color-blue-700: #00456f;
-  --color-blue-800: #002f4b;
-  --color-blue-900: #001a29;
-
-  /* Accent lime — the kit's --e-global-color-accent, used sparingly on navy */
-  --color-lime-300: #d3e26f;
-  --color-lime-400: #bed130;
-  --color-lime-500: #a3b621;
+  /* Bright electric blue: buttons, links and accents */
+  --color-blue-50: #e9f2ff;
+  --color-blue-100: #d0e4ff;
+  --color-blue-200: #a6ccff;
+  --color-blue-300: #6fb0ff;
+  --color-blue-400: #3d93ff;
+  --color-blue-500: #1a7bf5;
+  --color-blue-600: #0b62d6;
+  --color-blue-700: #0a4fac;
+  --color-blue-800: #0b3f85;
+  --color-blue-900: #0c3167;
 }
 
 @theme inline {
@@ -62,12 +57,8 @@
   --color-blue-800: var(--color-blue-800);
   --color-blue-900: var(--color-blue-900);
 
-  --color-lime-300: var(--color-lime-300);
-  --color-lime-400: var(--color-lime-400);
-  --color-lime-500: var(--color-lime-500);
-
   --font-sans: var(--font-inter);
-  --font-display: var(--font-oswald);
+  --font-display: var(--font-archivo);
 }
 
 body {
@@ -82,7 +73,7 @@ body {
   padding-inline: 1.25rem;
 }
 
-/* Visible, on-brand keyboard focus ring everywhere — never remove outline without replacing it */
+/* Visible, on-brand keyboard focus ring everywhere; never remove outline without replacing it */
 :focus-visible {
   outline: 2px solid var(--color-blue-500);
   outline-offset: 2px;
@@ -94,7 +85,7 @@ body {
   stroke-dasharray: 60 940;
   stroke-dashoffset: 1000;
   animation: circuit-travel 7s linear infinite;
-  filter: drop-shadow(0 0 4px var(--color-lime-400));
+  filter: drop-shadow(0 0 5px var(--color-blue-400));
 }
 
 .circuit-pulse-delayed {
@@ -124,7 +115,7 @@ body {
   }
 }
 
-/* If motion is reduced the marquee animation is frozen at 0 — allow manual scroll instead */
+/* If motion is reduced the marquee animation is frozen at 0, allow manual scroll instead */
 @media (prefers-reduced-motion: reduce) {
   .marquee-viewport {
     overflow-x: auto;

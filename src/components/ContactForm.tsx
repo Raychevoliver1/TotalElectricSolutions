@@ -46,7 +46,7 @@ export default function ContactForm() {
         className="rounded-xl bg-navy-50 border border-navy-100 p-8 text-center"
       >
         <h3 className="font-display text-xl font-semibold text-navy-950">
-          Thanks — your message is on its way.
+          Thanks, your message is on its way.
         </h3>
         <p className="mt-2 text-navy-900/70">
           We&apos;ll get back to you as soon as we can.
@@ -137,7 +137,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="inline-flex items-center justify-center rounded-md bg-blue-500 px-7 py-3.5 text-sm font-bold text-white hover:bg-blue-600 transition-colors disabled:opacity-60"
+        className="inline-flex items-center justify-center rounded-md bg-blue-600 px-7 py-3.5 text-sm font-bold text-white hover:bg-blue-700 transition-colors disabled:opacity-60"
       >
         {status === "submitting" ? "Sending..." : "Send Us A Message"}
       </button>
