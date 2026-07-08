@@ -36,15 +36,13 @@ export default function Footer() {
               height={80}
               className="h-14 w-auto"
             />
-            <span className="inline-flex items-center justify-center rounded-lg bg-white p-1.5">
-              <Image
-                src="/images/brand/safecontractor-approved.png"
-                alt="SafeContractor Approved"
-                width={56}
-                height={56}
-                className="h-12 w-12"
-              />
-            </span>
+            <Image
+              src="/images/brand/safecontractor-approved.png"
+              alt="SafeContractor Approved"
+              width={56}
+              height={56}
+              className="h-14 w-14"
+            />
           </div>
         </div>
 
