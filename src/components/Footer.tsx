@@ -21,11 +21,11 @@ export default function Footer() {
       <div className="container-tes py-10 sm:py-14 grid gap-8 sm:gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
           <Image
-            src="/images/brand/logo.svg"
+            src="/images/brand/tes-logo.png"
             alt={site.companyName}
-            width={160}
-            height={112}
-            className="h-12 w-auto mb-4 brightness-0 invert"
+            width={168}
+            height={121}
+            className="h-14 w-auto mb-4 brightness-0 invert"
           />
           <p className="max-w-sm text-sm text-navy-300">{site.heroSubheading}</p>
           <div className="mt-6 flex items-center gap-4">

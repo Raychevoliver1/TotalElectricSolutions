@@ -39,24 +39,17 @@ export default function Header() {
       <div className="container-tes flex h-20 items-center justify-between">
         <Link
           href="/"
-          aria-label="Total Electric Solutions, home"
-          className="flex items-center gap-3 shrink-0"
+          className="flex items-center shrink-0"
           onClick={() => setOpen(false)}
         >
           <Image
-            src="/images/brand/logo-mark.svg"
-            alt=""
-            width={44}
-            height={102}
-            className="h-11 w-auto"
+            src="/images/brand/tes-logo.png"
+            alt="Total Electric Solutions"
+            width={168}
+            height={121}
+            className="h-12 w-auto sm:h-14"
             priority
           />
-          <span className="font-display font-bold leading-none text-navy-950">
-            <span className="block text-lg sm:text-xl tracking-tight">Total Electric</span>
-            <span className="block text-xs sm:text-sm font-semibold uppercase tracking-[0.28em] text-blue-600">
-              Solutions
-            </span>
-          </span>
         </Link>
 
         <nav aria-label="Primary" className="hidden lg:flex items-center gap-8">
