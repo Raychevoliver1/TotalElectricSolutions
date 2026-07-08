@@ -17,8 +17,8 @@
     },
     {
       "name": "London Office",
-      "town": "Farringdon, London",
-      "address": ["60 Greys Inn Road", "Farringdon", "London"]
+      "town": "Camden, London",
+      "address": ["60 Grays Inn Road", "Camden, London", "WC1X 8LU"]
     }
   ],
   "clients": [

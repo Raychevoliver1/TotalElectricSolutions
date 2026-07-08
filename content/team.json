@@ -4,14 +4,12 @@
     { "name": "Max French", "role": "Managing Director" },
     { "name": "Susan French", "role": "Finance Director" },
     { "name": "Charlotte French", "role": "Pre-Contracts Manager" },
-    { "name": "Ellis Peter", "role": "Pre-Contracts Manager" },
     { "name": "Owen Thomas", "role": "Technical Services Manager" },
     { "name": "Edward French", "role": "Technical Designer" },
     { "name": "Dylan Bains", "role": "CAD Technical Drawer" },
     { "name": "Antony De Luca", "role": "Project Director" },
     { "name": "Joe French", "role": "Project Manager" },
     { "name": "Jack Cameron", "role": "Project Manager" },
-    { "name": "Lee Fabro", "role": "Project Manager" },
     { "name": "Sophie Hunter", "role": "Accounts Assistant" }
   ],
   "onSiteTeam": [
