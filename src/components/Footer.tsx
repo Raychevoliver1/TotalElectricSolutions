@@ -26,7 +26,7 @@ export default function Footer() {
               alt=""
               width={40}
               height={62}
-              className="h-11 w-auto brightness-0 invert"
+              className="h-16 w-auto brightness-0 invert"
             />
             <span className="font-brand leading-none text-white">
               <span className="block text-3xl font-bold tracking-[0.02em]">TES</span>

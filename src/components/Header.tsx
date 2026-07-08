@@ -48,7 +48,7 @@ export default function Header() {
             alt=""
             width={40}
             height={62}
-            className="h-9 w-auto sm:h-11"
+            className="h-12 w-auto sm:h-16"
             priority
           />
           <span className="font-brand leading-none text-navy-950">
