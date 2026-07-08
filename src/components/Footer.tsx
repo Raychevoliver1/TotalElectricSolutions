@@ -20,13 +20,21 @@ export default function Footer() {
     <footer className="bg-navy-950 text-navy-100">
       <div className="container-tes py-10 sm:py-14 grid gap-8 sm:gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
-          <Image
-            src="/images/brand/tes-logo.png"
-            alt={site.companyName}
-            width={168}
-            height={121}
-            className="h-14 w-auto mb-4 brightness-0 invert"
-          />
+          <div className="mb-4 flex items-center gap-3">
+            <Image
+              src="/images/brand/tes-symbol.png"
+              alt=""
+              width={40}
+              height={62}
+              className="h-11 w-auto brightness-0 invert"
+            />
+            <span className="font-brand leading-none text-white">
+              <span className="block text-3xl font-bold tracking-[0.02em]">TES</span>
+              <span className="mt-1 block text-sm font-medium tracking-[0.01em] text-navy-200">
+                Total Electric Solutions
+              </span>
+            </span>
+          </div>
           <p className="max-w-sm text-sm text-navy-300">{site.heroSubheading}</p>
           <div className="mt-6 flex items-center gap-4">
             <Image
